@@ -1,0 +1,65 @@
+/* พื้นหลัง */
+body{
+    background:#f5f5f5;
+    font-family:sans-serif;
+    margin:0;
+}
+
+/* หัวข้อ */
+.header{
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    padding:15px;
+}
+
+/* กล่องแจ้งเตือน */
+.notification{
+    background:#fff;
+    width:520px;
+    margin:25px auto;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+/* รูปร้าน */
+.notification img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:12px;
+    border:2px solid #000;
+}
+
+/* ข้อมูล */
+.notification-info{
+    flex:1;
+}
+
+/* สถานะ */
+.status{
+    font-size:15px;
+}
+
+/* รอพิจารณา */
+.pending{
+    color:#f39c12;
+    font-weight:500;
+}
+
+/* รายละเอียด */
+.detail{
+    color:#e53935;
+    font-size:14px;
+    margin-top:5px;
+    cursor:pointer;
+}
+
+/* hover */
+.detail:hover{
+    text-decoration:underline;
+}

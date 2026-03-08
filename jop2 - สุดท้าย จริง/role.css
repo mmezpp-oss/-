@@ -1,0 +1,167 @@
+*{
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+}
+
+.role-app{
+    width:320px;
+    text-align:center;
+    position:relative;
+}
+
+.logo-wrap{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#f0f0f0;
+    margin:0 auto 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ปุ่มบทบาทหลัก */
+.role-btn {
+    width: 100%;
+    padding: 16px;           /* เพิ่มความสูงของปุ่ม */
+    border-radius: 50px;     /* ทำให้ขอบมนเป็นวงรี (Pill shape) */
+    border: none;
+    font-size: 16px;         /* ขนาดตัวอักษรพอดีคำ */
+    font-weight: bold;       /* ทำให้ตัวหนาเหมือนในรูป */
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: #111;  /* สีดำสนิท */
+    color: #ffffff;          /* ตัวหนังสือสีขาว */
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* เพิ่มมิติเล็กน้อย */
+}
+
+/* เอฟเฟกต์เมื่อเอาเมาส์ไปชี้ (Hover) */
+.role-btn:hover {
+    background-color: #333;  /* ให้สีจางลงเล็กน้อยตอนชี้ */
+    transform: translateY(-2px); /* ยกตัวขึ้นเล็กน้อย */
+}
+
+/* เอฟเฟกต์เมื่อกด (Active) */
+.role-btn:active {
+    transform: scale(0.96);  /* ยุบตัวลงเมื่อกด */
+    background-color: #000;
+}
+
+/* ปรับแต่งปุ่มแอดมิน (ไอคอนหูฟัง) */
+.admin-btn {
+    position: absolute;
+    bottom: -60px;   /* ปรับระยะให้พอดี */
+    right: 10px;
+    cursor: pointer;
+    color: #111;
+    opacity: 0.8;
+}
+
+.admin-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.admin-btn:active{
+    transform:scale(0.9);
+}
+.role-btn,
+.admin-btn{
+    transition:all 0.15s ease;
+}
+:root{
+    --dark:#111;
+    --gray:#9e9e9e;
+}
+/* ===== Modal Overlay ===== */
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+/* ===== Card ===== */
+.modal-card{
+    width:340px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    animation:popup 0.25s ease;
+}
+
+/* ===== Icon ===== */
+.modal-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    margin:0 auto 20px;
+}
+
+.modal-card label{
+    display:block;
+    text-align:left;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+.modal-card input{
+    width:100%;
+    padding:12px;
+    border-radius:25px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+}
+
+.modal-card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#222;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.modal-back{
+    margin-top:15px;
+    font-size:12px;
+    color:#777;
+    cursor:pointer;
+}
+
+/* ===== Animation ===== */
+@keyframes popup{
+    from{
+        transform:scale(0.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+

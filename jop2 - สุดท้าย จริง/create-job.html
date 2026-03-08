@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประกาศรับสมัครงาน</title>
+  <link rel="stylesheet" href="create-job.css">
+</head>
+
+<body>
+
+<h3 class="header">ประกาศรับสมัครงาน</h3>
+
+<div class="form">
+
+  <!-- หน้า 1 -->
+  <label>ชื่อบริษัท/ร้านทั่วไป</label>
+  <input type="text" id="title" >
+
+  <label>รายละเอียดงาน</label>
+  <textarea id="description" ></textarea>
+
+  <label>สถานที่ทำงาน</label>
+  <input type="text" id="location" >
+
+  <label>จำนวนคน</label>
+  <input type="number" id="amount">
+
+  <label>อายุผู้สมัคร (ขั้นต่ำ)</label>
+  <input type="number" id="age_min">
+
+  <!-- หน้า 2 -->
+  <label>ระหว่างวันที่</label>
+  <input type="text" id="work_date" >
+
+  <label>เวลาทำงาน</label>
+  <input type="text" id="work_time" >
+
+  <label>ค่าจ้าง</label>
+  <input type="text" id="salary" >
+
+  <label>ประเภทงาน</label>
+  <select id="type">
+    <option value="mall">งานในห้าง</option>
+    <option value="outside">งานนอกห้าง</option>
+  </select>
+
+  <button onclick="submitJob()">ส่งข้อมูลไปประกาศ</button>
+  <button onclick="goBack()">ออก</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="create-job.js"></script>
+<div id="popup" class="popup-overlay">
+  <div class="popup-box">
+    <h3 id="popup-text">สำเร็จ</h3>
+    <button onclick="closePopup()">ตกลง</button>
+  </div>
+</div>
+</body>
+</html>

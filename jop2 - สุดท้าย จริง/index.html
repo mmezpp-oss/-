@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เข้าสู่ระบบ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- โลโก้ไก่ -->
+  <div class="logo-wrap">
+    <svg width="120" height="120" viewBox="0 0 200 200"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <!-- วงกลม -->
+      <circle cx="100" cy="100" r="90" fill="#eeeeee"/>
+
+      <!-- หัวไก่ -->
+      <ellipse cx="100" cy="80" rx="28" ry="36" fill="#000"/>
+
+      <!-- ตา -->
+      <circle cx="110" cy="75" r="5" fill="#fff"/>
+      <circle cx="112" cy="75" r="2" fill="#000"/>
+
+      <!-- จะงอยปาก -->
+      <polygon points="128,80 150,72 150,88" fill="#e60000"/>
+
+      <!-- หงอน -->
+      <path d="M75 40
+                     C70 20,90 15,95 30
+                     C100 10,125 10,120 35
+                     C140 25,150 45,130 55
+                     Z"
+            fill="#e60000"/>
+
+      <!-- สูท -->
+      <path d="M55 150 L85 105 L100 125 L115 105 L145 150 Z"
+            fill="#000"/>
+
+      <!-- เนคไท -->
+      <polygon points="100,125 92,150 100,170 108,150"
+               fill="#000"/>
+    </svg>
+  </div>
+
+  <!-- ข้อความอีเมล (ตรงกลาง) -->
+  <div class="title-text" id="label-text">อีเมล</div>
+
+  <!-- ช่องกรอก -->
+  <input
+          type="email"
+          id="input-field"
+          placeholder=""
+          required
+  />
+
+
+  <!-- ปุ่ม -->
+  <button onclick="handleSubmit()">เข้าสู่ระบบ</button>
+
+
+  <!-- OTP (จำลอง) -->
+  <div id="otp-box">
+    รหัส OTP ของคุณคือ <b id="otp-show"></b>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<!-- custom alert -->
+<div id="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-text" id="modal-message">
+      ข้อความแจ้งเตือน
+    </div>
+    <button class="modal-btn" onclick="closeModal()">ตกลง</button>
+  </div>
+</div>
+
+</body>
+</html>

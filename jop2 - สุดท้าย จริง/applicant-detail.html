@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายละเอียดผู้สมัคร</title>
+
+  <link rel="stylesheet" href="applicant-detail.css">
+
+</head>
+<body>
+
+<div class="header">
+  แจ้งเตือนผู้สมัคร
+</div>
+
+<div class="profile-card">
+
+  <img id="profileImg" class="profile-img">
+
+  <div class="profile-info">
+
+    <p><b>ชื่อ:</b> <span id="name"></span></p>
+    <p><b>อีเมล:</b> <span id="email"></span></p>
+    <p><b>เบอร์:</b> <span id="phone"></span></p>
+    <p><b>สถานศึกษา:</b> <span id="school"></span></p>
+    <p><b>ประสบการณ์:</b> <span id="exp"></span></p>
+
+  </div>
+
+</div>
+
+<div class="action-buttons">
+
+  <button class="btn-approve" onclick="approve()">อนุมัติ</button>
+  <button class="btn-reject" onclick="reject()">ไม่อนุมัติ</button>
+  <button class="btn-back" onclick="goBack()">ออก</button>
+
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+
+<script>
+
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+  const jobId = params.get("job");
+
+  async function loadProfile(){
+
+    const { data } = await supabase
+            .from("seeker")
+            .select("*")
+            .eq("email", email)
+            .single();
+    document.getElementById("profileImg").src = data.img_face;
+
+    document.getElementById("name").innerText = data.name;
+    document.getElementById("email").innerText = data.email;
+    document.getElementById("phone").innerText = data.phone;
+    document.getElementById("school").innerText = data.school;
+    document.getElementById("exp").innerText = data.exp;
+
+  }
+  loadProfile();
+  async function approve(){
+
+    if(!email){
+      alert("ไม่พบ email");
+      return;
+    }
+
+    const { data, error } = await supabase
+            .from("applications")
+            .select("status")
+            .eq("seeker_email", email)
+            .eq("job_id", jobId)
+            .single();
+
+    if(error){
+      alert(error.message);
+      return;
+    }
+
+    if(data && data.status !== "pending"){
+      alert("คุณพิจารณาไปแล้ว");
+      return;
+    }
+
+    const { error: updateError } = await supabase
+            .from("applications")
+            .update({ status: "approved" })
+            .eq("seeker_email", email)
+            .eq("job_id", jobId);
+
+    if(updateError){
+      alert(updateError.message);
+      return;
+    }
+
+    alert("อนุมัติสำเร็จ");
+
+    window.location.href = "notifications.html";
+  }
+  async function reject(){
+
+    if(!email){
+      alert("ไม่พบ email");
+      return;
+    }
+
+    const { data, error } = await supabase
+            .from("applications")
+            .select("status")
+            .eq("seeker_email", email)
+            .eq("job_id", jobId)
+            .limit(1)
+            .single();
+
+    if(error){
+      alert(error.message);
+      return;
+    }
+
+    if(error){
+      alert(error.message);
+      return;
+    }
+
+    if(data && data.status !== "pending"){
+      alert("คุณพิจารณาไปแล้ว");
+      return;
+    }
+
+    const { error: updateError } = await supabase
+            .from("applications")
+            .update({ status: "rejected" })
+            .eq("seeker_email", email)
+            .eq("job_id", jobId);
+
+    if(updateError){
+      alert(updateError.message);
+      return;
+    }
+
+    alert("ปฏิเสธแล้ว");
+
+    window.location.href = "notifications.html";
+  }
+  function goBack(){
+    window.location.href = "notifications.html";
+  }
+</script>
+
+</body>
+</html>

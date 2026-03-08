@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายละเอียดประกาศ</title>
+  <link rel="stylesheet" href="employer-job-detail.css">
+</head>
+<body>
+
+<div class="header">
+  <h3>รายละเอียดประกาศของคุณ</h3>
+</div>
+
+<div class="job-detail-box">
+  <h4 id="title"></h4>
+  <p><b>รายละเอียดงาน:</b> <span id="description"></span><p>
+  <p><b>สถานที่:</b> <span id="location"></span></p>
+  <p><b>วันที่:</b> <span id="work_date"></span></p>
+  <p><b>เวลา:</b> <span id="work_time"></span></p>
+  <p><b>ค่าจ้าง:</b> <span id="salary"></span></p>
+  <p><b>จำนวนที่รับ:</b> <span id="amount"></span> คน</p>
+  <p><b>อายุขั้นต่ำ:</b> <span id="age_min"></span> ปี</p>
+
+
+</div>
+
+<div class="action-buttons">
+  <button class="btn-back" onclick="goBack()">ออก</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="employer-job-detail.js"></script>
+
+</body>
+</html>

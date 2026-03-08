@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เลือกบทบาท</title>
+  <link rel="stylesheet" href="role.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+
+<body>
+
+<div class="role-app">
+
+  <!-- โลโก้ -->
+  <div class="logo-wrap">
+    <svg width="110" height="110" viewBox="0 0 200 200"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <circle cx="100" cy="100" r="90" fill="#eeeeee"/>
+      <ellipse cx="100" cy="80" rx="28" ry="36" fill="#000"/>
+      <circle cx="110" cy="75" r="5" fill="#fff"/>
+      <circle cx="112" cy="75" r="2" fill="#000"/>
+      <polygon points="128,80 150,72 150,88" fill="#e60000"/>
+      <path d="M75 40 C70 20,90 15,95 30
+                     C100 10,125 10,120 35
+                     C140 25,150 45,130 55 Z"
+            fill="#e60000"/>
+      <path d="M55 150 L85 105 L100 125 L115 105 L145 150 Z"
+            fill="#000"/>
+      <polygon points="100,125 92,150 100,170 108,150"
+               fill="#000"/>
+    </svg>
+  </div>
+
+  <!-- ปุ่มบทบาท -->
+  <button class="role-btn" onclick="goSeeker()">ผู้หางานทำ</button>
+  <button class="role-btn" onclick="goEmployer()">ผู้ประกอบการ</button>
+
+
+
+  <!-- แอดมิน -->
+  <div class="admin-btn" onclick="goAdmin()">
+  <svg viewBox="0 0 24 24" width="28" height="28">
+    <path fill="currentColor"
+          d="M12 2C6.48 2 2 6.48 2 12v6a2 2 0 0 0 2 2h3v-8H4v-1
+                 c0-4.42 3.58-8 8-8s8 3.58 8 8v1h-3v8h3a2 2 0 0 0 2-2v-6
+                 c0-5.52-4.48-10-10-10z"/>
+  </svg>
+</div>
+
+
+</div>
+
+<script src="role.js"></script>
+</body><!-- Admin Modal -->
+
+<div id="adminModal" class="modal">
+
+  <div class="modal-card">
+    <div class="modal-icon">
+      🎧
+    </div>
+
+    <label>รหัสผ่านเข้าสู่ระบบ</label>
+    <input
+            type="password"
+            id="adminPassword"
+            placeholder="xxxx"
+    >
+
+    <button onclick="loginAdmin()">เข้าสู่ระบบ</button>
+
+    <div class="modal-back" onclick="closeAdmin()">กลับ</div>
+  </div>
+
+</div>
+
+</html>

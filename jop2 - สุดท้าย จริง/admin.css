@@ -1,0 +1,167 @@
+*{
+    box-sizing:border-box;
+    font-family: 'Sarabun', Tahoma, Arial, sans-serif;
+
+}
+
+body{
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.card{
+    width:360px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    margin:0 auto 20px;
+}
+
+label{
+    display:block;
+    text-align:left;
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border-radius:25px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#222;
+    color:#fff;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.back{
+    margin-top:15px;
+    font-size:12px;
+    color:#777;
+    cursor:pointer;
+}
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 10px;
+}
+
+.tabs {
+    position: fixed;
+    top: 48px; /* อยู่ใต้ปุ่มกลับ */
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+/* ปุ่มแท็บ */
+.tab {
+    flex: 1;
+    padding: 12px 0;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* ตอน hover */
+.tab:hover {
+    background: #e0e0e0;
+}
+
+/* ตอน active (เลือกอยู่) */
+.tab.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+#list-container {
+    margin-top: 130px;
+}
+/* แถบปุ่มกลับ */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1100;
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+}
+/* === FIX ภาษาไทย === */
+html, body, table, th, td, button, h1, h2, h3, p, div, span {
+    font-family: 'Sarabun', Tahoma, Arial, sans-serif !important;
+}

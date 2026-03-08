@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประกาศรับสมัครงาน</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="employer-jobs.css">
+</head>
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+
+    <div class="nav-item active" onclick="goHome()">
+        <i class="fas fa-home"></i>
+    </div>
+
+    <div class="nav-item" onclick="openNotifications()">
+        <i class="fas fa-bell"></i>
+    </div>
+
+    <div class="nav-item" onclick="goProfile()">
+        <i class="fas fa-user"></i>
+    </div>
+
+</div>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<body>
+
+<div class="header">
+    <h3>ประกาศรับสมัครงาน</h3>
+</div>
+
+<div class="container">
+
+    <!-- การ์ด + -->
+    <div class="job-grid" id="jobGrid">
+        <!-- การ์ด + -->
+        <div class="job-card add-card" onclick="goCreateJob()">
+            <div class="plus">+</div>
+            <p>สร้างประกาศรับสมัครงานของคุณ</p>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>
+
+    function goHome(){
+        window.location.href = "employer-jobs.html";
+    }
+
+    function goProfile(){
+        window.location.href = "employer-profile.html";
+    }
+
+    function openNotifications(){
+        window.location.href = "notifications.html";
+    }
+
+</script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="employer-jobs.js"></script>
+
+</body>
+</html>

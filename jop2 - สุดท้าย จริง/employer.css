@@ -1,0 +1,98 @@
+*{
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+body{
+    margin:0;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    padding:30px 0;
+}
+
+.card{
+    width:360px;
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+}
+
+h3{
+    margin-top:0;
+}
+
+label{
+    display:block;
+    font-size:13px;
+    margin-top:15px;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    margin-top:6px;
+}
+
+input[type=file]{
+    border:1px dashed #ccc;
+    background:#f9f9f9;
+}
+
+.two-col{
+    display:flex;
+    gap:10px;
+}
+
+.location-row{
+    display:flex;
+    gap:10px;
+    margin-top:6px;
+}
+
+.loc-btn{
+    flex:1;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.location-row select{
+    flex:1;
+}
+
+/* ปุ่มล่าง (ไม่เบี้ยวแน่นอน) */
+.btn-group{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#aaa;
+    color:#fff;
+    cursor:pointer;
+}
+.required {
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>โปรไฟล์ผู้หางาน</title>
+
+  <link rel="stylesheet" href="jobs.css">
+  <link rel="stylesheet" href="seeker-profile.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+  แจ้งเตือนผู้สมัคร
+</div>
+
+<div class="profile">
+
+  <img id="img_face">
+
+  <div class="box">
+
+    <p>ชื่อ: <span id="name"></span></p>
+    <p>อีเมล: <span id="email"></span></p>
+    <p>เบอร์โทร: <span id="phone"></span></p>
+    <p>สถานศึกษา: <span id="school"></span></p>
+    <p>อายุ: <span id="age"></span></p>
+    <p>ประสบการณ์: <span id="exp"></span></p>
+    <p>เพศ: <span id="gender"></span></p>
+    <p>ที่อยู่: <span id="address"></span></p>
+
+  </div>
+
+
+
+</div>
+
+<div class="bottom-nav">
+
+  <div class="nav-item" onclick="goHome()">
+    <i class="fa fa-home"></i>
+  </div>
+
+  <div class="nav-item" onclick="goNotification()">
+    <i class="fa fa-bell"></i>
+  </div>
+
+  <div class="nav-item active">
+    <i class="fa fa-user"></i>
+  </div>
+
+</div>
+
+<script src="seeker-profile.js"></script>
+
+</body>
+</html>

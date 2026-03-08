@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>อนุมัติข้อมูล</title>
+
+    <!-- ฟอนต์ไทย -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="approval.css">
+
+    <link rel="stylesheet" href="admin-employer-detail.css">
+</head>
+
+<body>
+
+<!-- แท็บด้านบน -->
+<div class="top-tabs">
+    <div class="tab active">ผู้ประกอบการ</div>
+</div>
+
+<div class="tab ">รูปผู้ประกอบการ</div>
+<div class="doc-box">
+    <img id="imgOwner" onclick="openImage(this.src)">
+</div>
+
+
+<!-- รายละเอียด -->
+<p class="detail-text">รายละเอียด</p>
+<div class="info-box">
+    <p><b>ชื่อผู้ประกอบการ:</b> <span id="empName"></span></p>
+    <p><b>เลขบัตรประชาชน:</b> <span id="empRegister"></span></p>
+    <p><b>อีเมล:</b> <span id="empEmail"></span></p>
+    <p><b>เบอร์โทร:</b> <span id="empPhone"></span></p>
+    <p><b>ชื่อร้าน:</b> <span id="empShop"></span></p>
+    <p><b>ประเภทสถานที่:</b> <span id="empLocation"></span></p>
+    <p><b>ที่อยู่:</b> <span id="empAddress"></span></p>
+
+</div>
+
+<!-- รูปเอกสาร -->
+<div class="tab ">รูปบัตรประชาชน</div>
+<div class="doc-box">
+    <img id="imgCard" onclick="openImage(this.src)">
+</div>
+
+<!-- รูปร้าน -->
+<div class="tab ">รูปหน้าร้าน/บริษัท</div>
+<div class="doc-box">
+    <img id="shopImg" onclick="openImage(this.src)">
+</div>
+
+<div class="tab ">รูปจดทะเบียนร้าน</div>
+<div class="doc-box">
+    <img id="imgRC" onclick="openImage(this.src)">
+
+</div>
+
+<!-- ปุ่ม -->
+<div class="action-buttons">
+    <button class="btn" onclick="approve()">อนุมัติ</button>
+    <button class="btn" onclick="reject()">ไม่อนุมัติ</button>
+</div>
+<!-- modal ดูรูป -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImg">
+</div>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="admin-employer-detail.js"></script>
+
+<div id="popupAlert" class="popup-overlay">
+    <div class="popup-box">
+        <h3 id="popupText">สำเร็จ</h3>
+        <button onclick="closePopup()">ตกลง</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    font-family: 'Sarabun', sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* กล่องกลาง */
+.container{
+    width:900px;
+    margin:60px auto;
+}
+
+/* หัวข้อ */
+.title{
+    text-align:center;
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+/* Tabs */
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.tab{
+    padding:10px 25px;
+    border:1px solid #000;
+    background:white;
+    cursor:pointer;
+    font-size:15px;
+    border-radius:6px;
+    transition:0.2s;
+}
+
+.tab:hover{
+    background:#000;
+    color:white;
+}
+
+.tab.active{
+    background:#000;
+    color:white;
+}
+
+/* ตาราง */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* header */
+th{
+    background:#000;
+    color:white;
+    padding:14px;
+    font-weight:500;
+    font-size:14px;
+}
+
+/* cell */
+td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+/* hover row */
+tbody tr:hover{
+    background:#f9f9f9;
+}
+
+/* ปุ่ม */
+.detail-btn{
+    background:#000;
+    color:white;
+    padding:6px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:13px;
+    transition:0.2s;
+}
+
+.detail-btn:hover{
+    background:#333;
+}

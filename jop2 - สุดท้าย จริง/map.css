@@ -1,0 +1,32 @@
+body{
+    margin:0;
+    font-family:sans-serif;
+}
+
+.map-header{
+    text-align:center;
+    padding:12px;
+    background:#fff;
+    font-size:14px;
+    border-bottom:1px solid #ddd;
+}
+
+#map{
+    width:100%;
+    height:calc(100vh - 120px);
+}
+
+.map-footer{
+    padding:15px;
+    background:#fff;
+}
+
+.map-footer button{
+    width:100%;
+    padding:12px;
+    border-radius:25px;
+    border:none;
+    background:#000;
+    color:#fff;
+    font-size:14px;
+}

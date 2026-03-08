@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แจ้งเตือนผู้สมัคร</title>
+  <link rel="stylesheet" href="employer-jobs.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="employer-jobs.css">
+  <link rel="stylesheet" href="notifications.css">
+
+</head>
+<script>
+
+  function goHome(){
+    window.location.href = "employer-jobs.html";
+  }
+
+  function goNotification(){
+    window.location.href = "notifications.html";
+  }
+
+  function goProfile(){
+    window.location.href = "employer-profile.html";
+  }
+
+</script>
+<body>
+
+<div class="header">
+  แจ้งเตือนผู้สมัคร
+</div>
+
+<div id="applicants"></div>
+
+
+<div class="bottom-nav">
+
+  <div class="nav-item" onclick="goHome()">
+    <i class="fas fa-home"></i>
+  </div>
+
+  <div class="nav-item active">
+    <i class="fas fa-bell"></i>
+  </div>
+
+  <div class="nav-item" onclick="goProfile()">
+    <i class="fas fa-user"></i>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="db.js"></script>
+  <script src="notifications.js"></script>
+</div>
+</body>
+</html>

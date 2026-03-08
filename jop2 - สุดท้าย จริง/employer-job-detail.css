@@ -1,0 +1,159 @@
+/* นำเข้าฟอนต์ภาษาไทย Prompt */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --success-color: #10b981;
+    --danger-color:  #ef4444;
+    --text-main:     #1f2937;
+    --text-muted:    #4b5563;
+    --bg-color:      #f3f4f6;
+    --card-bg:       #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header, .job-detail-box, .action-buttons {
+    width: 100%;
+    max-width: 600px;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- ส่วนกล่องรายละเอียดงานแบบใหม่ --- */
+.job-detail-box {
+    background-color: var(--card-bg);
+    border-radius: 20px; /* มนขึ้นตามคำขอ */
+    padding: 35px;
+    /* เงาแบบมิติซ้อนกัน (Layered Shadows) */
+    box-shadow:
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* แถบสีด้านบนกล่อง */
+.job-detail-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+}
+
+.job-detail-box h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--text-main);
+    border-bottom: 1.5px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+/* ปรับค่าจ้างให้เป็นเหมือนคำอื่น ๆ */
+.job-detail-box p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ล้างสไตล์เก่าของ highlight-salary ออกทั้งหมดเพื่อให้เหมือนบรรทัดอื่น */
+.highlight-salary {
+    margin-top: 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+}
+
+.highlight-salary b {
+    color: var(--text-main) !important;
+}
+
+.highlight-salary span {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    color: var(--text-muted) !important;
+}
+
+.job-detail-box p b {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* ปรับแต่งความกว้างสำหรับหน้าจอคอม/แท็บเล็ต */
+@media (min-width: 480px) {
+    .job-detail-box p {
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .job-detail-box p b {
+        min-width: 130px;
+        margin-right: 10px;
+    }
+}
+
+/* --- ส่วนปุ่มกด --- */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.btn-back {
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid #e5e7eb;
+    padding: 12px 60px; /* เพิ่มความกว้างให้ดูสมาร์ทขึ้น */
+    font-size: 1rem;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* แอนิเมชันที่นุ่มนวลขึ้น */
+    letter-spacing: 1px;
+}
+
+.btn-back:hover {
+    background-color: var(--danger-color);
+    color: white; /* เปลี่ยนพื้นหลังเป็นแดงและตัวอักษรขาวเมื่อชี้ */
+    border-color: var(--danger-color);
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3); /* เงาสีแดงจางๆ */
+    transform: translateY(-2px); /* ลอยขึ้นเล็กน้อย */
+}
+
+.btn-back:active {
+    transform: scale(0.96);
+}

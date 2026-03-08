@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ใบประกาศหางาน</title>
+
+  <link rel="stylesheet" href="jobs.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h3>ใบประกาศหางาน</h3>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" onclick="filterJobs('mall')">งานในห้าง</div>
+  <div class="tab" onclick="filterJobs('outside')">งานนอกห้าง</div>
+</div>
+
+<!-- Job Grid -->
+<div class="job-grid" id="jobGrid">
+  <!-- JS จะสร้างการ์ดงานตรงนี้ -->
+</div>
+
+<!-- Bottom Nav -->
+<!-- Bottom Nav -->
+<div class="bottom-nav">
+
+  <div class="nav-item active" onclick="goHome()">
+    <i class="fa fa-home"></i>
+  </div>
+
+  <div class="nav-item" onclick="goNotification()">
+    <i class="fa fa-bell"></i>
+  </div>
+
+  <div class="nav-item" onclick="window.location.href='seeker-profile.html'">
+    <i class="fa fa-user"></i>
+  </div>
+  </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="jobs.js"></script>
+  <script>
+
+    function goHome(){
+    window.location.href = "jobs.html";
+  }
+
+    function goNotification(){
+      window.location.href = "notification.html";
+  }
+
+    function goProfile(){
+    window.location.href = "profile.html";
+  }
+
+</script>
+
+</body>
+</html>

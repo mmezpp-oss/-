@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รายละเอียดผู้หางาน</title>
+    <link rel="stylesheet" href="approval.css">
+    <link rel="stylesheet" href="admin-seeker-detail.css">
+</head>
+<!-- modal ดูรูป -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImg">
+</div>
+
+<body>
+
+<div class="top-tabs">
+    <div class="tab active">ผู้หางาน</div>
+</div>
+
+<p class="detail-text">รายละเอียด</p>
+
+<div class="info-box">
+    <p><b>ชื่อผู้หางาน:</b> <span id="skName"></span></p>
+    <p><b>เลขบัตรประจำตัวประชาชน:</b> <span id="skidcard"></span></p>
+    <p><b>อายุ:</b> <span id="skAge"></span></p>
+    <p><b>เพศ:</b> <span id="skGender"></span></p>
+    <p><b>สถานศึกษา:</b> <span id="skSchool"></span></p>
+    <p><b>อีเมล:</b> <span id="skEmail"></span></p>
+    <p><b>เบอร์โทร:</b> <span id="skPhone"></span></p>
+    <p><b>ประสบการณ์:</b> <span id="skExp"></span></p>
+
+</div>
+<div class="tab ">รูปบัตรประจำตัวประชาชน</div>
+<div class="doc-box">
+    <img id="imgCard" alt="บัตรประชาชน" onclick="openImage(this.src)">
+
+</div>
+<div class="tab ">รูปบัตรนักศึกษา</div>
+<div class="doc-box">
+    <img id="imgProfile" alt="บัตรนักศึกษา" onclick="openImage(this.src)">
+</div>
+<div class="tab ">รูปหน้าตรงนักศึกษา</div>
+<div class="doc-box">
+    <img id="imgFace" alt="ยืนยันตัวตน" onclick="openImage(this.src)">
+</div>
+
+<div class="action-buttons">
+    <button class="btn approve" onclick="approveSeeker()">อนุมัติ</button>
+    <button class="btn reject" onclick="rejectSeeker()">ไม่อนุมัติ</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="admin-seeker-detail.js"></script>
+
+<div id="popupAlert" class="popup-overlay">
+    <div class="popup-box">
+        <h3 id="popupText">สำเร็จ</h3>
+        <button onclick="closePopup()">ตกลง</button>
+    </div>
+</div>
+
+</body>
+</html>

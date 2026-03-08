@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รายละเอียดงาน</title>
+
+    <link rel="stylesheet" href="jobs.css">
+    <link rel="stylesheet" href="job-detail.css">
+</head>
+<body>
+
+<div class="header">
+    <h3>รายละเอียดงาน</h3>
+</div>
+
+<div class="job-box">
+    <h4 id="title"></h4>
+    <p><b>รายละเอียดงาน:</b> <span id="description"></span><p>
+    <p><b>สถานที่:</b> <span id="location"></span></p>
+    <p><b>วันที่:</b> <span id="work_date"></span></p>
+    <p><b>เวลา:</b> <span id="work_time"></span></p>
+    <p><b>ค่าจ้าง:</b> <span id="salary"></span></p>
+    <p><b>จำนวนที่รับ:</b> <span id="amount"></span> คน</p>
+
+    <button onclick="applyJob()">ส่งใบสมัคร</button>
+    <button onclick="goBack()">ออก</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="db.js"></script>
+<script src="job-detail.js"></script>
+
+<div id="popup" class="popup-overlay">
+    <div class="popup-box">
+        <h3 id="popup-text">สำเร็จ</h3>
+        <button onclick="closePopup()">ตกลง</button>
+    </div>
+</div>
+</body>
+</html>

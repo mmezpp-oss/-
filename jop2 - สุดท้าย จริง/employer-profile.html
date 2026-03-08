@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>โปรไฟล์ผู้ประกอบการ</title>
+
+  <link rel="stylesheet" href="employer-jobs.css">
+  <link rel="stylesheet" href="employer-profile.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+    .profile{
+      padding:20px;
+    }
+
+    .profile img{
+      width:150px;
+      border-radius:15px;
+      border:2px solid black;
+    }
+
+    .box{
+      border:2px solid black;
+      padding:20px;
+      margin-top:20px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="header">
+  โปรไฟล์ผู้ประกอบการ
+</div>
+
+<div class="profile">
+
+  <img id="shopImg">
+
+  <div class="box">
+
+    <p>ชื่อ: <span id="name"></span></p>
+    <p>อีเมล: <span id="email"></span></p>
+    <p>ชื่อร้าน: <span id="shop"></span></p>
+    <p>เบอร์โทร: <span id="phone"></span></p>
+    <p>ประเภทสถานที่: <span id="location"></span></p>
+    <p>ที่อยู่ร้าน: <span id="address"></span></p>
+
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+
+  <div class="nav-item" onclick="goHome()">
+    <i class="fa fa-home"></i>
+  </div>
+
+  <div class="nav-item" onclick="goNotification()">
+    <i class="fa fa-bell"></i>
+  </div>
+
+  <div class="nav-item active">
+    <i class="fa fa-user"></i>
+  </div>
+
+</div>
+
+<script src="employer-profile.js"></script>
+
+</body>
+</html>

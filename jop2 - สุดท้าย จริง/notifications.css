@@ -1,0 +1,47 @@
+/* พื้นหลัง */
+body{
+    background:#f5f5f5;
+}
+
+/* กล่องแจ้งเตือน */
+.notification-card{
+    background:#fff;
+    border-radius:14px;
+    padding:15px;
+    margin:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.2s;
+}
+
+/* hover */
+.notification-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* รูป */
+.notification-card img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* ข้อความ */
+.notification-text{
+    font-size:14px;
+}
+
+/* รายละเอียด */
+.notification-detail{
+    color:#e53935;
+    font-size:13px;
+    margin-top:3px;
+    cursor:pointer;
+}
+.notification-detail:hover{
+    text-decoration: underline;
+}
